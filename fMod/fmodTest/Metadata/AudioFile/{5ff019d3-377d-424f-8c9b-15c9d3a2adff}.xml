@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{5ff019d3-377d-424f-8c9b-15c9d3a2adff}">
+		<property name="assetPath">
+			<value>Motor/truck.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>55.640816326530611</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{996abc89-7096-4d55-affb-ddd956bf70f8}</destination>
+		</relationship>
+	</object>
+</objects>
