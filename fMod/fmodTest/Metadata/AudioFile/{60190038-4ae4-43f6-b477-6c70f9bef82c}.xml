@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{60190038-4ae4-43f6-b477-6c70f9bef82c}">
+		<property name="assetPath">
+			<value>Ambiente/coyotes-008.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>45.881927437641721</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{996abc89-7096-4d55-affb-ddd956bf70f8}</destination>
+		</relationship>
+	</object>
+</objects>
