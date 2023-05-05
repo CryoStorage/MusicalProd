@@ -96,6 +96,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{3267e320-24ce-4cd8-a7b7-b46e3d503683}">
+		<property name="volume">
+			<value>3</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{ec8251b7-8b02-4b31-9ae5-1a858479b120}</destination>
 		</relationship>
@@ -147,6 +150,10 @@
 		<property name="spawnRate">
 			<value>40</value>
 		</property>
+		<relationship name="modulators">
+			<destination>{9f7059ca-39c6-4853-9fcf-064b14374a6a}</destination>
+			<destination>{bd13fde9-743e-4cf3-9179-c372462f2833}</destination>
+		</relationship>
 		<relationship name="sound">
 			<destination>{24bf9ef6-da32-412c-9947-0045d06ef490}</destination>
 		</relationship>
@@ -184,6 +191,9 @@
 		<property name="maximumScatterDistance">
 			<value>270</value>
 		</property>
+		<relationship name="modulators">
+			<destination>{71e0a675-8a5e-4b18-9a63-ef064451a3a5}</destination>
+		</relationship>
 		<relationship name="sound">
 			<destination>{1718bcc6-da6d-4e6b-8128-1b8421f34c88}</destination>
 		</relationship>
@@ -244,6 +254,22 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{7e3ee970-54ed-440a-985d-a280ef49aa64}" />
+	<object class="RandomizerModulator" id="{9f7059ca-39c6-4853-9fcf-064b14374a6a}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>volume</value>
+		</property>
+		<property name="amount">
+			<value>7</value>
+		</property>
+	</object>
+	<object class="RandomizerModulator" id="{bd13fde9-743e-4cf3-9179-c372462f2833}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>pitch</value>
+		</property>
+		<property name="amount">
+			<value>3.5</value>
+		</property>
+	</object>
 	<object class="MultiSound" id="{24bf9ef6-da32-412c-9947-0045d06ef490}">
 		<relationship name="sounds">
 			<destination>{adab8c4d-b7b6-4c65-a790-97b393d3b3e7}</destination>
@@ -263,6 +289,14 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{c8afff95-4c45-4144-a472-36684e4157b3}" />
+	<object class="RandomizerModulator" id="{71e0a675-8a5e-4b18-9a63-ef064451a3a5}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>pitch</value>
+		</property>
+		<property name="amount">
+			<value>3.5</value>
+		</property>
+	</object>
 	<object class="MultiSound" id="{1718bcc6-da6d-4e6b-8128-1b8421f34c88}">
 		<relationship name="sounds">
 			<destination>{e5ad3830-563d-4d46-a6a0-18d6d13887e3}</destination>
