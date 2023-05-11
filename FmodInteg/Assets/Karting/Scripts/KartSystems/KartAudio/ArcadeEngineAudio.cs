@@ -10,19 +10,23 @@ namespace KartGame.KartSystems
         public float minRPM = 0;
         public float maxRPM = 5000;
         ArcadeKart arcadeKart;
+        FMODUnity.StudioEventEmitter emitter;
 
         void Awake()
         {
+            arcadeKart = GetComponentInParent<ArcadeKart>();
+            if (emitter != null) return;
+            emitter = GetComponent<FMODUnity.StudioEventEmitter>();
+            if (arcadeKart != null) return;
             arcadeKart = GetComponentInParent<ArcadeKart>();
         }
 
         void Update()
         {
-            float kartSpeed     = arcadeKart != null ? arcadeKart.LocalSpeed() : 0;
+            float kartSpeed = arcadeKart.LocalSpeed();
             // set RPM value for the FMOD event
-            float effectiveRPM = Mathf.Lerp(minRPM, maxRPM, kartSpeed);
-            var emitter = GetComponent<FMODUnity.StudioEventEmitter>();
-            emitter.SetParameter("RPM", effectiveRPM);
+            //float effectiveRPM = Mathf.Lerp(minRPM, maxRPM, kartSpeed);
+            this.emitter.SetParameter("Acelerar", Mathf.Abs(kartSpeed)); 
         }
     }
 }

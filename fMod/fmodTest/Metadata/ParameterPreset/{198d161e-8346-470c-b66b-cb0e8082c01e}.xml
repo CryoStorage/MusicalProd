@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{198d161e-8346-470c-b66b-cb0e8082c01e}">
+		<property name="name">
+			<value>Force</value>
+		</property>
+		<relationship name="folder">
+			<destination>{b00c868b-17a9-4a74-8fe7-e390caa0ccf3}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{88bb99b0-2c3c-44fe-9e46-b569d812bab9}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{88bb99b0-2c3c-44fe-9e46-b569d812bab9}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
