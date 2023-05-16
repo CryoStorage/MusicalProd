@@ -16,20 +16,8 @@ public class ForceCalc : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        emitter.SetParameter("Force", RemapForce(rb.velocity.magnitude));
-        Debug.Log(RemapForce(rb.velocity.magnitude));
+        float mappedForce = Mathf.InverseLerp(0,10 , rb.velocity.magnitude);
+        emitter.SetParameter("Force", mappedForce);
     }
-    
-    float RemapForce(float force)
-    {
-        var eForce = Mathf.Lerp(0, 1, force);
-        if (eForce >= 1)
-        {
-            return 1;
-        }
-        else { return eForce; }
 
-        
-
-    }
 }

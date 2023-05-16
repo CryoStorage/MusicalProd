@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{ef715e7e-a3e4-48f1-874f-01eb9c19f3f5}">
+		<property name="assetPath">
+			<value>Music/Deference_for_Darkness.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>398.54399999999998</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{996abc89-7096-4d55-affb-ddd956bf70f8}</destination>
+		</relationship>
+	</object>
+</objects>

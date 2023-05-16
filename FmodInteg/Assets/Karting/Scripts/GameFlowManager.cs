@@ -35,7 +35,8 @@ public class GameFlowManager : MonoBehaviour
     [Tooltip("Prefab for the lose game message")]
     public DisplayMessage loseDisplayMessage;
 
-
+    [SerializeField] FMODUnity.StudioEventEmitter musicEmitter;
+    [SerializeField] FMODUnity.StudioEventEmitter winEventEmitter;
     public GameState gameState { get; private set; }
 
     public bool autoFindKarts = true;
@@ -50,6 +51,7 @@ public class GameFlowManager : MonoBehaviour
 
     void Start()
     {
+        musicEmitter = GetComponent<FMODUnity.StudioEventEmitter>();
         if (autoFindKarts)
         {
             karts = FindObjectsOfType<ArcadeKart>();
@@ -87,6 +89,7 @@ public class GameFlowManager : MonoBehaviour
     IEnumerator CountdownThenStartRaceRoutine() {
         yield return new WaitForSeconds(3f);
         StartRace();
+        musicEmitter.Play();
     }
 
     void StartRace() {
@@ -173,6 +176,8 @@ public class GameFlowManager : MonoBehaviour
             // create a game message
             winDisplayMessage.delayBeforeShowing = delayBeforeWinMessage;
             winDisplayMessage.gameObject.SetActive(true);
+            musicEmitter.Stop();
+            winEventEmitter.Play();
         }
         else
         {
@@ -182,6 +187,8 @@ public class GameFlowManager : MonoBehaviour
             // create a game message
             loseDisplayMessage.delayBeforeShowing = delayBeforeWinMessage;
             loseDisplayMessage.gameObject.SetActive(true);
+            musicEmitter.Stop();
+            
         }
     }
 }
